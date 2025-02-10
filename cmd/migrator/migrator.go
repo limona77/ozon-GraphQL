@@ -12,17 +12,13 @@ import (
 )
 
 func main() {
-	var storagePath, migrationsPath, migrationsTable, action string
+	var migrationsPath, migrationsTable, action string
 
-	flag.StringVar(&storagePath, "storage-path", "", "path to storage")
 	flag.StringVar(&migrationsPath, "migrations-path", "", "path to migrations")
 	flag.StringVar(&migrationsTable, "migrations-table", "migrations", "name of migrations table")
 	flag.StringVar(&action, "action", "up", "migration action: up or down")
 	flag.Parse()
 
-	if storagePath == "" {
-		panic("storage-path is required")
-	}
 	if migrationsPath == "" {
 		panic("migrations-path is required")
 	}
