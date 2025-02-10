@@ -17,8 +17,8 @@
    docker-compose up
 ```
 
-4. Создай папку storage в корне проект и запусти миграции
+4. Запусти миграции
 ```bash 
-   go run ./cmd/migrator --storage-path=./storage/postgres.db --migrations-path=./migrations --action=down
+   go run ./cmd/migrator  --migrations-path=./migrations --action=up
 ```
 
